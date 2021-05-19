@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="SignUp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="0qM-lq-TXQ">
+                                <rect key="frame" x="20" y="94" width="374" height="135.5"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="20" baselineRelativeArrangement="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qf2-IU-uO4">
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="34.5"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="person.circle.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="yU0-nv-aAR">
+                                                <rect key="frame" x="0.0" y="0.5" width="20" height="33.5"/>
+                                            </imageView>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="sEu-fw-QGP">
+                                                <rect key="frame" x="40" y="0.0" width="279.5" height="34.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits" textContentType="username"/>
+                                                <connections>
+                                                    <action selector="usernameDidChange:" destination="BYZ-38-t0r" eventType="editingChanged" id="bCU-gj-BPD"/>
+                                                </connections>
+                                            </textField>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="b5d-MV-eVG">
+                                                <rect key="frame" x="339.5" y="0.0" width="34.5" height="34.5"/>
+                                                <subviews>
+                                                    <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="J4a-Ct-JWR">
+                                                        <rect key="frame" x="7.5" y="7.5" width="20" height="20"/>
+                                                    </activityIndicatorView>
+                                                </subviews>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <constraints>
+                                                    <constraint firstItem="J4a-Ct-JWR" firstAttribute="centerX" secondItem="b5d-MV-eVG" secondAttribute="centerX" id="IcM-Lk-R4W"/>
+                                                    <constraint firstItem="J4a-Ct-JWR" firstAttribute="centerY" secondItem="b5d-MV-eVG" secondAttribute="centerY" id="x8g-xo-m2b"/>
+                                                </constraints>
+                                            </view>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="b5d-MV-eVG" secondAttribute="trailing" id="ABA-sK-ulf"/>
+                                            <constraint firstItem="b5d-MV-eVG" firstAttribute="top" secondItem="qf2-IU-uO4" secondAttribute="top" id="YJH-YC-UQs"/>
+                                            <constraint firstAttribute="bottom" secondItem="b5d-MV-eVG" secondAttribute="bottom" id="oQd-Fh-1GF"/>
+                                            <constraint firstItem="b5d-MV-eVG" firstAttribute="width" secondItem="qf2-IU-uO4" secondAttribute="height" id="znn-Ku-20p"/>
+                                        </constraints>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="20" baselineRelativeArrangement="YES" id="Moa-iP-4Xd">
+                                        <rect key="frame" x="0.0" y="51" width="374" height="34"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="lock.circle.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="rMz-D7-Dff">
+                                                <rect key="frame" x="0.0" y="0.5" width="20" height="33"/>
+                                            </imageView>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="egw-iG-vnZ">
+                                                <rect key="frame" x="40" y="0.0" width="334" height="34"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                                <connections>
+                                                    <action selector="passwordDidChange:" destination="BYZ-38-t0r" eventType="editingChanged" id="QNS-Hg-h68"/>
+                                                </connections>
+                                            </textField>
+                                        </subviews>
+                                        <viewLayoutGuide key="safeArea" id="ZEG-aD-bqN"/>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="20" baselineRelativeArrangement="YES" id="z8P-hT-ahE">
+                                        <rect key="frame" x="0.0" y="101.5" width="374" height="34"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="lock.circle.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="BhI-eT-8md">
+                                                <rect key="frame" x="0.0" y="0.5" width="20" height="33"/>
+                                            </imageView>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Repeat Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jMJ-lI-Bmc">
+                                                <rect key="frame" x="40" y="0.0" width="334" height="34"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                                <connections>
+                                                    <action selector="passwordAgainDidChange:" destination="BYZ-38-t0r" eventType="editingChanged" id="ciF-HA-dy8"/>
+                                                </connections>
+                                            </textField>
+                                        </subviews>
+                                        <viewLayoutGuide key="safeArea" id="rnJ-rd-rlM"/>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="qf2-IU-uO4" secondAttribute="trailing" id="ZtQ-kz-jWA"/>
+                                    <constraint firstItem="qf2-IU-uO4" firstAttribute="leading" secondItem="0qM-lq-TXQ" secondAttribute="leading" id="gOr-gK-hYT"/>
+                                    <constraint firstItem="qf2-IU-uO4" firstAttribute="top" secondItem="0qM-lq-TXQ" secondAttribute="top" id="wp8-sh-fdY"/>
+                                </constraints>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b5f-FD-r5u">
+                                <rect key="frame" x="20" y="289" width="374" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="Aqc-c7-ftM"/>
+                                </constraints>
+                                <state key="normal" title="Sign Up" backgroundImage="button-enabled"/>
+                                <state key="disabled" backgroundImage="button-disabled"/>
+                                <state key="highlighted" backgroundImage="button-highlighted"/>
+                                <connections>
+                                    <action selector="submitButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Vs0-ip-pfD"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="b5f-FD-r5u" firstAttribute="top" secondItem="0qM-lq-TXQ" secondAttribute="bottom" constant="59.5" id="COk-VX-w9M"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="b5f-FD-r5u" secondAttribute="trailing" constant="20" id="EeJ-HJ-1MM"/>
+                            <constraint firstItem="0qM-lq-TXQ" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="50" id="Oqv-CD-Dxh"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="0qM-lq-TXQ" secondAttribute="trailing" constant="20" id="XvJ-Zm-XoJ"/>
+                            <constraint firstItem="0qM-lq-TXQ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="hK4-iV-oBe"/>
+                            <constraint firstItem="b5f-FD-r5u" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="wcG-uN-5gl"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="nameFetchingIndicator" destination="J4a-Ct-JWR" id="ajD-Lb-2S2"/>
+                        <outlet property="submitButton" destination="b5f-FD-r5u" id="v80-eq-OOc"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="18.840579710144929" y="93.75"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="button-disabled" width="33" height="33"/>
+        <image name="button-enabled" width="33" height="33"/>
+        <image name="button-highlighted" width="33" height="33"/>
+        <image name="lock.circle.fill" catalog="system" width="128" height="121"/>
+        <image name="person.circle.fill" catalog="system" width="128" height="121"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
