@@ -57,7 +57,7 @@ class ViewController: UIViewController {
   private var validatedPassword: AnyPublisher<String?, Never> {
     $password.combineLatest($passwordAgain)
       .map { (p1, p2) -> String? in
-        guard p1 == p2, p1.count >= 8 else { return nil }
+        guard p1 == p2, p1.count >= 8 else { return nil }  // This is the password validation logic. It should be moved to a separate Publisher (just like NameValidator)
         return p1
     }.eraseToAnyPublisher()
   }
